@@ -1,0 +1,109 @@
+CpfOaSaMaDict = {
+        "35 & below": "The ration as follows - Oa [0.6217] Sa [0.1621] Ma [0.2162].",
+        "Above 35 to 45": "The ration as follows - Oa [0.5677] Sa [0.1891] Ma [0.2432].",
+        "Above 45 to 50": "The ration as follows - Oa [0.5136] Sa [0.2162] Ma [0.2702].",
+        "Above 50 to 55": "The ration as follows - Oa [0.4055] Sa [0.3108] Ma [0.2837].",
+        "Above 55 to 60": "The ration as follows - Oa [0.4286] Sa [0.1964] Ma [0.375].",
+        "Above 60 to 65": "The ration as follows - Oa [0.1893] Sa [0.2432] Ma [0.5675].",
+        "Above 65 to 70": "The ration as follows - Oa [0.0715] Sa [0.1785] Ma [0.75].",
+        "Above 70 above": "The ration as follows - Oa [0.08] Sa [0.08] Ma [0.84].",
+        "Explanatory": 'Note that rates are based on ratio, you may simply calculate your allocation by formulating in this manner; [OA allocation = CPF contribution * Oa ratio].',
+        "Example": "If the CPF contribution of an employee (30 years old) is $100, the allocation of his CPF contribution will be computed as: $62.17 = 100 x 0.6217.",
+        "Identification": "Oa [Refers to Ordinary Account] Sa [Refers to Special Account] Ma [Refers to Medisave Account]."
+    }
+print("To calculate your CPF allocation rate between 3 account, please indicate your self-contribution amount.")
+loopForCpfAllocation = 1
+while loopForCpfAllocation < 3:
+    print("If you have the CPF amount, please type 'Yes' otherwise 'No'")
+    YesOrNoCpfWithUser = input("> ").lower()
+    loopForCpfAllocation += 1
+    if YesOrNoCpfWithUser == "yes":
+        print('''Please insert your [age] as of this year, follow by [CPF contribution].''')
+        AskingAgeForOaSaMaAllocation = int(input("> "))
+        AskingContribForOaSaMaAllocation = int(input("> "))
+        if AskingAgeForOaSaMaAllocation <= 35:
+            OA = AskingContribForOaSaMaAllocation * 0.6217
+            SA = AskingContribForOaSaMaAllocation * 0.1621
+            MA = AskingContribForOaSaMaAllocation * 0.2162
+            Breakdown = "Allocation as follows; Oa [{}], Sa [{}] and Ma [{}]."
+            print(Breakdown.format(OA, SA, MA))
+            elaborateOnAllocation = CpfOaSaMaDict.get("35 & below")
+            exampleFurther = CpfOaSaMaDict.get("Example")
+            print(elaborateOnAllocation)
+            print(exampleFurther)
+        elif AskingAgeForOaSaMaAllocation <= 45:
+            OA = AskingContribForOaSaMaAllocation * 0.5677
+            SA = AskingContribForOaSaMaAllocation * 0.1891
+            MA = AskingContribForOaSaMaAllocation * 0.2432
+            Breakdown = "Allocation as follows; Oa [{}], Sa [{}] and Ma [{}]."
+            print(Breakdown.format(OA, SA, MA))
+            elaborateOnAllocation = CpfOaSaMaDict.get("Above 35 to 45")
+            exampleFurther = CpfOaSaMaDict.get("Explanatory")
+            print(elaborateOnAllocation)
+            print(exampleFurther)
+        elif AskingAgeForOaSaMaAllocation <= 50:
+            OA = AskingContribForOaSaMaAllocation * 0.5136
+            SA = AskingContribForOaSaMaAllocation * 0.2162
+            MA = AskingContribForOaSaMaAllocation * 0.2702
+            Breakdown = "Allocation as follows; Oa [{}], Sa [{}] and Ma [{}]."
+            print(Breakdown.format(OA, SA, MA))
+            elaborateOnAllocation = CpfOaSaMaDict.get("Above 45 to 50")
+            exampleFurther = CpfOaSaMaDict.get("Explanatory")
+            print(elaborateOnAllocation)
+            print(exampleFurther)
+        elif AskingAgeForOaSaMaAllocation <= 55:
+            OA = AskingContribForOaSaMaAllocation * 0.4055
+            SA = AskingContribForOaSaMaAllocation * 0.3108
+            MA = AskingContribForOaSaMaAllocation * 0.2837
+            Breakdown = "Allocation as follows; Oa [{}], Sa [{}] and Ma [{}]."
+            print(Breakdown.format(OA, SA, MA))
+            elaborateOnAllocation = CpfOaSaMaDict.get("Above 50 to 55")
+            exampleFurther = CpfOaSaMaDict.get("Explanatory")
+            print(elaborateOnAllocation)
+            print(exampleFurther)
+        elif AskingAgeForOaSaMaAllocation <= 60:
+            OA = AskingContribForOaSaMaAllocation * 0.4286
+            SA = AskingContribForOaSaMaAllocation * 0.1964
+            MA = AskingContribForOaSaMaAllocation * 0.375
+            Breakdown = "Allocation as follows; Oa [{}], Sa [{}] and Ma [{}]."
+            print(Breakdown.format(OA, SA, MA))
+            elaborateOnAllocation = CpfOaSaMaDict.get("Above 55 to 60")
+            exampleFurther = CpfOaSaMaDict.get("Explanatory")
+            print(elaborateOnAllocation)
+            print(exampleFurther)
+        elif AskingAgeForOaSaMaAllocation <= 65:
+            OA = AskingContribForOaSaMaAllocation * 0.1893
+            SA = AskingContribForOaSaMaAllocation * 0.2432
+            MA = AskingContribForOaSaMaAllocation * 0.5675
+            Breakdown = "Allocation as follows; Oa [{}], Sa [{}] and Ma [{}]."
+            print(Breakdown.format(OA, SA, MA))
+            elaborateOnAllocation = CpfOaSaMaDict.get("Above 60 to 65")
+            exampleFurther = CpfOaSaMaDict.get("Explanatory")
+            print(elaborateOnAllocation)
+            print(exampleFurther)
+        elif AskingAgeForOaSaMaAllocation <= 70:
+            OA = AskingContribForOaSaMaAllocation * 0.0715
+            SA = AskingContribForOaSaMaAllocation * 0.1785
+            MA = AskingContribForOaSaMaAllocation * 0.75
+            Breakdown = "Allocation as follows; Oa [{}], Sa [{}] and Ma [{}]."
+            print(Breakdown.format(OA, SA, MA))
+            elaborateOnAllocation = CpfOaSaMaDict.get("Above 65 to 70")
+            exampleFurther = CpfOaSaMaDict.get("Explanatory")
+            print(elaborateOnAllocation)
+            print(exampleFurther)
+        elif AskingAgeForOaSaMaAllocation >= 71:
+            OA = AskingContribForOaSaMaAllocation * 0.08
+            SA = AskingContribForOaSaMaAllocation * 0.08
+            MA = AskingContribForOaSaMaAllocation * 0.84
+            Breakdown = "Allocation as follows; Oa [{}], Sa [{}] and Ma [{}]."
+            print(Breakdown.format(OA, SA, MA))
+            elaborateOnAllocation = CpfOaSaMaDict.get("Above 70 above")
+            exampleFurther = CpfOaSaMaDict.get("Explanatory")
+            print(elaborateOnAllocation)
+            print(exampleFurther)
+        break
+    elif YesOrNoCpfWithUser == "no":
+        print("Please utilise the CPF contribution calculator feature before using this feature.")
+        break
+else:
+    print("Please type either 'Yes' or 'No' and relaunch the program.")
